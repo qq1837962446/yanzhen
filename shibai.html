@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2><?php echo $mins?></h2>
+<a href= <?php echo $href ?>>点击返回</a><span>3</span>秒中，自动返回;
+</body>
+</html>
+<script>
+    let num=document.querySelector("span");
+    let href=document.querySelector("a").href;
+    console.log(href);
+    let tims=3;
+    setInterval(function () {
+        tims--;
+        num.innerHTML=tims;
+        if(tims==0){
+            location.href=href;
+        }
+    },1000)
+</script>

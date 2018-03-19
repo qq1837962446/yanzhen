@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
+    <meta name="author" content="GeeksLabs">
+    <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
+
+    <title>Login Page 2 | Creative - Bootstrap 3 Responsive Admin Template</title>
+
+    <!-- Bootstrap CSS -->    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- bootstrap theme -->
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <!--external css-->
+    <!-- font icon -->
+    <link href="css/elegant-icons-style.css" rel="stylesheet" />
+    <link href="css/font-awesome.css" rel="stylesheet" />
+    <!-- Custom styles -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-responsive.css" rel="stylesheet" />
+    <script src="js/html5shiv.js"></script>
+</head>
+  <body class="login-img3-body">
+    <div class="container">
+      <form class="login-form" action="index.php" id="form">
+        <div class="login-wrap">
+            <p class="login-img">登录</p>
+            <div class="input-group">
+              <span class="input-group-addon">账号</span>
+              <input type="text" class="form-control" placeholder="Username" autofocus name="zhanghao">
+
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon">密码</span>
+                <input type="password" class="form-control pass" placeholder="Password" name="pass">
+            </div>
+            <label class="checkbox">
+                <input type="checkbox" value="remember-me"> Remember me
+                <span class="pull-right"> <a href="#"> Forgot Password?</a></span>
+            </label>
+            <button class="btn btn-primary btn-lg btn-block" type="submit">登录</button>
+            <button class="btn btn-info btn-lg btn-block" type="submit">注册</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
+<script src="js/jquery.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/messages_zh.js"></script>
+<script>
+    $("#form").validate({
+        rules: {
+            zhanghao: "required",
+            pass: "required",
+            zhanghao: {
+                required: true,
+                minlength: 2
+            },
+            pass: {
+                required: true,
+                minlength: 3
+            }
+        },
+        messages: {
+            zhanghao: "必填账号",
+            pass: "必填密码",
+            zhanghao: {
+                required: "请输入账号",
+                minlength: "账号长度不能小于5个字母"
+            },
+            pass: {
+                required: "请输入密码",
+                minlength: "密码长度不能小于6位"
+            }
+        }
+    })
+</script>
